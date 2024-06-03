@@ -1,7 +1,7 @@
-import { useRef , useEffect } from "react";
+import { useRef, useEffect } from "react";
 
 export default function One({ setOne, setFirstime, mean, empty }) {
-    const input = useRef();
+    const input = useRef(null);
 
     // if the emtpy button is clicked so empty the inputs
     useEffect(() => {
@@ -11,10 +11,14 @@ export default function One({ setOne, setFirstime, mean, empty }) {
         }
     }, [empty, setOne]);
 
-    // 
+    //
+
     return (
-        <div className="p-2 flex flex-col items-center bg-red-400 sm:p-4 rounded-lg shadow-md">
-            <label htmlFor={mean} className="mb-2 text-lg font-medium text-zinc-900">
+        <div className="p-2 flex flex-col items-center  sm:p-4 rounded-lg shadow-xl bordered">
+            <label
+                htmlFor={mean}
+                className="mb-2 text-sm sm:text-lg font-medium text-white uppercase"
+            >
                 {mean}
             </label>
             <input
@@ -24,9 +28,9 @@ export default function One({ setOne, setFirstime, mean, empty }) {
                 min={0}
                 placeholder="00"
                 id={mean}
-                className="w-14 sm:w-16 text-center  py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-14 sm:w-16 text-center  py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-white"
                 onChange={(event) => {
-                    const inputValue = event.target.value;
+                    let inputValue = event.target.value;
                     // set 0 as a default value when the input is empty
                     setOne(inputValue === "" ? 0 : parseInt(inputValue));
                     setFirstime(false);
