@@ -18,7 +18,7 @@ export default function Input({
     }, [Hours, Mins, Secs, setTotal]);
 
     return (
-        <>
+        <div className="relative">
             <div className="flex justify-around mt-16  py-4 rounded-md">
                 <One
                     setOne={setHours}
@@ -43,13 +43,13 @@ export default function Input({
                 total ? (
                     ""
                 ) : (
-                    <p className="text-red-500 text-center">
+                    <p className="text-amber-300 text-center absolute ml-[33.3%] ">
                         please fill in fieslds{" "}
                     </p>
                 )
             ) : (
                 ""
             )}
-        </>
+        </div>
     );
 }

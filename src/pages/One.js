@@ -17,7 +17,7 @@ export default function One({ setOne, setFirstime, mean, empty }) {
         <div className="p-2 flex flex-col items-center  sm:p-4 rounded-lg shadow-xl bordered">
             <label
                 htmlFor={mean}
-                className="mb-2 text-sm sm:text-lg font-medium text-white uppercase"
+                className="mb-2 text-sm sm:text-lg font-bold text-white uppercase "
             >
                 {mean}
             </label>
