@@ -35,10 +35,10 @@ export default function Counter({ total, isPlay , handleEmpty }) {
     }, [isPlay]);
 
     return (
-        <div className="flex items-center justify-evenly w-[60%] p-4 rounded-md mx-auto mt-[64px] bg-gray-400">
-            <span className="text-[44px] ">{String(H).padStart(2, "0")}</span> :
-            <span className="text-[44px] ">{String(M).padStart(2, "0")}</span> :
-            <span className="text-[44px] ">{String(S).padStart(2, "0")}</span>
+        <div className="flex items-center justify-evenly w-[60%] p-4 rounded-md mx-auto mt-[64px] bg-red-400 text-white">
+            <span className="text-[28px] sm:text-[44px] ">{String(H).padStart(2, "0")}</span> :
+            <span className="text-[28px] sm:text-[44px] ">{String(M).padStart(2, "0")}</span> :
+            <span className="text-[28px] sm:text-[44px] ">{String(S).padStart(2, "0")}</span>
         </div>
     );
 }

@@ -34,8 +34,9 @@ function App() {
 
     // the main application
     return (
-        <div className="p-4 bg-gray-300 h-[100dvh] sm:w-1/2 sm:mx-auto ">
+        <div className="p-4 bg-red-200 h-[100dvh] sm:w-1/2 sm:mx-auto ">
             <h1 className=" text-center font-bold text-xl uppercase">
+                <i className="fa-solid fa-stopwatch m-1 sm:mx-4"></i>
                 Count Down App
             </h1>
 
